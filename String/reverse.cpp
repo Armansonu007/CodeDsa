@@ -5,6 +5,9 @@ using namespace std;
 int main(){
     string str;
     cin>>str;
+    
+    //using stack 
+    //time complexities will gonna take place O(N) space and time O(N)
     string  ans;
     int l= 0;
     int n=str.size()-1;
@@ -18,5 +21,7 @@ int main(){
         st.pop();
     }
     cout<<ans;
+   
+    cout<<str;
     return 0;
 }
