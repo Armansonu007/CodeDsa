@@ -16,7 +16,24 @@ int main(){
             cout << 0<<endl;
     }
     */
-    /*3rd one is mathematical approach
-     
+    /*3rd one is mathematical division approach
+    here what you are gonna doing that every time you get the 
+    remainder store in the some temp variable and then
+    put in some storage variable either in string or queue 
+    and divide it by 2 ,  
+    repeat the process until it becomes zero.
+    and just return answer 
+
+     queue<int> ans;
+    while (num > 0) {
+        int temp = num % 2;
+        ans.push_front(temp); 
+        num = num / 2;
+    }
+    // Reverse the string to get the correct binary representation
+   
+    for(auto i: ans){
+        cout<< i ;
+    }
     */
 }

@@ -1,19 +1,22 @@
 #include<iostream>
 #include<string>
-#include<algorithm> // Include <algorithm> header for reverse function
+#include<algorithm> 
+#include<queue>
 using namespace std;
 
 int main() {
     int num;
     cin >> num;
-    string ans = "";
+    queue<int> ans;
     while (num > 0) {
         int temp = num % 2;
-        ans.push_back(temp + '0'); // Convert integer to character
+        ans.push_front(temp); 
         num = num / 2;
     }
     // Reverse the string to get the correct binary representation
-    reverse(ans.begin(), ans.end());
-    cout << ans;
+   
+    for(auto i: ans){
+        cout<< i ;
+    }
     return 0;
 }
