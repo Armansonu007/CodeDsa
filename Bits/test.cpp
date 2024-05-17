@@ -1,22 +1,21 @@
-#include<iostream>
-#include<string>
-#include<algorithm> 
-#include<queue>
+#include <iostream>
+#include <algorithm> // for std::max
 using namespace std;
 
 int main() {
-    int num;
-    cin >> num;
-    queue<int> ans;
-    while (num > 0) {
-        int temp = num % 2;
-        ans.push_front(temp); 
-        num = num / 2;
+    // Corrected array initialization
+    int arr[] = {2, 3, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int mx = 0; // Initializing mx to 0
+
+    // Loop to find the maximum XOR value
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            int temp = arr[i] ^ arr[j];
+            mx = max(mx, temp);
+        }
     }
-    // Reverse the string to get the correct binary representation
-   
-    for(auto i: ans){
-        cout<< i ;
-    }
+
+    cout << mx;
     return 0;
 }
