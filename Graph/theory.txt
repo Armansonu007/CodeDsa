@@ -1,0 +1,2 @@
+Graph is a data structure 
+it consists of nodes and links between the them called edges.
